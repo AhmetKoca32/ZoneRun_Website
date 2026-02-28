@@ -5,29 +5,69 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="ZoneRun – Koşu ve alan takibi uygulaması. Haritada rotanızı çizin, istatistiklerinizi takip edin. Play Store'dan indirin.">
   <title>ZoneRun – Koşu ve Alan Takibi</title>
+  <link rel="alternate" hreflang="tr" href="https://zonerun.github.io/ZoneRun_WebSitesi/index.html">
+  <link rel="alternate" hreflang="en" href="https://zonerun.github.io/ZoneRun_WebSitesi/index.html">
   <link rel="stylesheet" href="css/style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#0d9488">
 </head>
 <body>
   <header class="site-header">
-    <a href="/" class="site-logo">ZoneRun</a>
-    <nav class="lang-nav" aria-label="Dil seçimi">
-      <a href="#" data-lang="tr" aria-current="page">TR</a>
-      <a href="#" data-lang="en">EN</a>
-    </nav>
+    <a href="index.html" class="site-logo">
+      <img src="images/Main_Logo.jpg" alt="ZoneRun" class="site-logo-img" width="36" height="36">
+      <span>ZoneRun</span>
+    </a>
+    <div class="header-actions">
+      <button type="button" class="theme-toggle" id="theme-toggle" aria-label="Tema değiştir">
+        <span class="icon-light" aria-hidden="true"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/></svg></span>
+        <span class="icon-dark" aria-hidden="true"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/></svg></span>
+      </button>
+      <nav class="lang-nav" aria-label="Dil seçimi">
+        <a href="#" data-lang="tr" aria-current="page">TR</a>
+        <a href="#" data-lang="en">EN</a>
+      </nav>
+    </div>
   </header>
 
   <main class="main">
     <div class="hero-wrap">
       <section class="hero">
-        <h1 data-tr="ZoneRun" data-en="ZoneRun">ZoneRun</h1>
-        <p class="tagline" data-tr="Koşu ve alan takibinizi haritada görün. Rota çizin, istatistiklerinizi takip edin." data-en="See your runs and area tracking on the map. Draw routes, track your stats.">
-          Koşu ve alan takibinizi haritada görün. Rota çizin, istatistiklerinizi takip edin.
+        <div class="hero-logo animate-in">
+          <img src="images/Main_Logo.jpg" alt="ZoneRun" width="120" height="120">
+        </div>
+        <h1 class="animate-in animate-in-1" data-tr="ZoneRun" data-en="ZoneRun">ZoneRun</h1>
+        <p class="tagline animate-in animate-in-2" data-tr="ZoneRun ile koşularınızı haritada takip edin, rotalarınızı kaydedin ve istatistiklerinizi görün." data-en="Track your runs on the map, save your routes and view your stats with ZoneRun.">
+          ZoneRun ile koşularınızı haritada takip edin, rotalarınızı kaydedin ve istatistiklerinizi görün.
         </p>
-        <a href="#" class="cta" id="play-store-link" data-tr="Play Store'dan İndir" data-en="Download on Play Store">Play Store'dan İndir</a>
+        <div class="cta-wrap animate-in animate-in-3">
+          <a href="#" class="cta" id="play-store-link" data-tr="Play Store'dan İndir" data-en="Download on Play Store">Play Store'dan İndir</a>
+          <span class="store-note" data-tr="Android'de yakında" data-en="Coming soon on Android">Android'de yakında</span>
+        </div>
       </section>
     </div>
+
+    <section class="how-it-works" id="nasil">
+      <h2 class="animate-in" data-tr="Nasıl çalışır?" data-en="How it works?">Nasıl çalışır?</h2>
+      <div class="steps">
+        <div class="step-card animate-in">
+          <div class="num">1</div>
+          <h3 data-tr="Uygulamayı açın" data-en="Open the app">Uygulamayı açın</h3>
+          <p data-tr="Haritada konumunuzu görün, koşuya hazırlanın." data-en="See your location on the map and get ready to run.">Haritada konumunuzu görün, koşuya hazırlanın.</p>
+        </div>
+        <div class="step-card animate-in animate-in-1">
+          <div class="num">2</div>
+          <h3 data-tr="Rota çizin veya koşun" data-en="Draw a route or run">Rota çizin veya koşun</h3>
+          <p data-tr="Poligon çizerek alan katedin veya serbest koşun; mesafe ve alan kaydedilir." data-en="Cover area by drawing a polygon or run freely; distance and area are recorded.">Poligon çizerek alan katedin veya serbest koşun; mesafe ve alan kaydedilir.</p>
+        </div>
+        <div class="step-card animate-in animate-in-2">
+          <div class="num">3</div>
+          <h3 data-tr="İstatistiklerinizi görün" data-en="View your stats">İstatistiklerinizi görün</h3>
+          <p data-tr="Toplam mesafe, seri, aylık özet ve geçmiş rotalarınız tek yerde." data-en="Total distance, streak, monthly summary and past routes in one place.">Toplam mesafe, seri, aylık özet ve geçmiş rotalarınız tek yerde.</p>
+        </div>
+      </div>
+    </section>
 
     <section class="features">
       <h2 data-tr="Özellikler" data-en="Features">Özellikler</h2>
@@ -51,10 +91,83 @@
       </ul>
     </section>
 
-    <footer class="footer-links">
-      <a href="gizlilik.html" data-tr="Gizlilik Politikası" data-en="Privacy Policy">Gizlilik Politikası</a>
-      <span> · </span>
-      <a href="privacy.html">Privacy Policy (EN)</a>
+    <section class="screenshots" aria-labelledby="screenshots-title">
+      <h2 id="screenshots-title" data-tr="Nasıl görünüyor?" data-en="How it looks">Nasıl görünüyor?</h2>
+      <div class="screenshot-slider">
+        <div class="screenshot-track" id="screenshot-track">
+          <div class="screenshot-slide">
+            <img src="images/Map_Page.png" alt="Harita ekranı" data-alt-tr="Harita ekranı" data-alt-en="Map screen" width="280" height="560" loading="lazy">
+          </div>
+          <div class="screenshot-slide">
+            <img src="images/Home_Page.png" alt="Ana sayfa" data-alt-tr="Ana sayfa" data-alt-en="Home screen" width="280" height="560" loading="lazy">
+          </div>
+          <div class="screenshot-slide">
+            <img src="images/History_Page.png" alt="Geçmiş" data-alt-tr="Geçmiş" data-alt-en="History" width="280" height="560" loading="lazy">
+          </div>
+          <div class="screenshot-slide">
+            <img src="images/Profile_Page.png" alt="Profil" data-alt-tr="Profil" data-alt-en="Profile" width="280" height="560" loading="lazy">
+          </div>
+          <div class="screenshot-slide">
+            <img src="images/Share_Preview.png" alt="Paylaşım önizlemesi" data-alt-tr="Paylaşım önizlemesi" data-alt-en="Share preview" width="280" height="560" loading="lazy">
+          </div>
+        </div>
+        <div class="slider-nav">
+          <button type="button" id="slider-prev" aria-label="Önceki">‹</button>
+          <button type="button" id="slider-next" aria-label="Sonraki">›</button>
+        </div>
+        <div class="slider-dots" id="slider-dots"></div>
+      </div>
+    </section>
+
+    <section class="roadmap">
+      <h2 data-tr="Yakında" data-en="Coming soon">Yakında</h2>
+      <ul class="roadmap-list">
+        <li><span class="bullet"></span><span data-tr="Farklı harita stilleri" data-en="Different map styles">Farklı harita stilleri</span></li>
+        <li><span class="bullet"></span><span data-tr="İstatistik dışa aktarma" data-en="Export statistics">İstatistik dışa aktarma</span></li>
+        <li><span class="bullet"></span><span data-tr="Ana ekran widget'ı" data-en="Home screen widget">Ana ekran widget'ı</span></li>
+        <li><span class="bullet"></span><span data-tr="Geliştirilmiş raporlar" data-en="Enhanced reports">Geliştirilmiş raporlar</span></li>
+      </ul>
+    </section>
+
+    <section class="faq" id="sss">
+      <h2 data-tr="Sıkça Sorulan Sorular" data-en="Frequently Asked Questions">Sıkça Sorulan Sorular</h2>
+      <details>
+        <summary data-tr="Konum neden isteniyor?" data-en="Why is location required?">Konum neden isteniyor?</summary>
+        <div class="content" data-tr="Haritada rota çizmek, koşu mesafesi ve alan hesaplamak için konum erişimi gereklidir." data-en="Location access is required to draw routes on the map and calculate run distance and area.">Haritada rota çizmek, koşu mesafesi ve alan hesaplamak için konum erişimi gereklidir.</div>
+      </details>
+      <details>
+        <summary data-tr="Hesap açmak zorunlu mu?" data-en="Is an account required?">Hesap açmak zorunlu mu?</summary>
+        <div class="content" data-tr="Hayır; hesap isteğe bağlıdır. Giriş yaparsanız verileriniz cihazlar arası senkronize edilebilir." data-en="No; an account is optional. If you sign in, your data can be synced across devices.">Hayır; hesap isteğe bağlıdır. Giriş yaparsanız verileriniz cihazlar arası senkronize edilebilir.</div>
+      </details>
+      <details>
+        <summary data-tr="Verilerim nerede saklanıyor?" data-en="Where is my data stored?">Verilerim nerede saklanıyor?</summary>
+        <div class="content" data-tr="Konum ve istatistikler cihazınızda; hesap açtıysanız Firebase (Google) sunucularında şifreli olarak saklanır." data-en="Location and statistics are on your device; if you have an account, they are stored encrypted on Firebase (Google) servers.">Konum ve istatistikler cihazınızda; hesap açtıysanız Firebase (Google) sunucularında şifreli olarak saklanır.</div>
+      </details>
+      <details>
+        <summary data-tr="İnternet olmadan kullanabilir miyim?" data-en="Can I use it offline?">İnternet olmadan kullanabilir miyim?</summary>
+        <div class="content" data-tr="Harita önbelleği varsa sınırlı kullanım mümkün; tam deneyim için internet gerekir." data-en="Limited use is possible if the map is cached; internet is required for the full experience.">Harita önbelleği varsa sınırlı kullanım mümkün; tam deneyim için internet gerekir.</div>
+      </details>
+      <details>
+        <summary data-tr="Bildirimleri kapatabilir miyim?" data-en="Can I disable notifications?">Bildirimleri kapatabilir miyim?</summary>
+        <div class="content" data-tr="Evet; ayarlardan bildirimleri tamamen kapatabilir veya saatlerini değiştirebilirsiniz." data-en="Yes; you can turn off notifications completely or change their times in settings.">Evet; ayarlardan bildirimleri tamamen kapatabilir veya saatlerini değiştirebilirsiniz.</div>
+      </details>
+    </section>
+
+    <footer class="site-footer">
+      <div class="site-footer-inner">
+        <a href="gizlilik.html" data-tr="Gizlilik Politikası" data-en="Privacy Policy">Gizlilik Politikası</a>
+        <span class="sep">·</span>
+        <a href="privacy.html">Privacy (EN)</a>
+        <span class="sep">·</span>
+        <a href="#sss" data-tr="SSS" data-en="FAQ">SSS</a>
+        <span class="sep">·</span>
+        <a href="mailto:zoneruun@gmail.com" data-tr="İletişim" data-en="Contact">İletişim</a>
+        <span class="sep">·</span>
+        <a href="#" data-lang="tr">TR</a>
+        <span class="sep">·</span>
+        <a href="#" data-lang="en">EN</a>
+      </div>
+      <p class="copy">ZoneRun © <span id="year">2025</span></p>
     </footer>
   </main>
 

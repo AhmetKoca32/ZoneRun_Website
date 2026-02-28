@@ -1,0 +1,17 @@
+{
+  "name": "ZoneRun",
+  "short_name": "ZoneRun",
+  "description": "Koşu ve alan takibi uygulaması",
+  "start_url": "./index.html",
+  "display": "minimal-ui",
+  "background_color": "#fafbfc",
+  "theme_color": "#0d9488",
+  "icons": [
+    {
+      "src": "images/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}

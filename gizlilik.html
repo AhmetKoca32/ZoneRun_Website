@@ -5,15 +5,28 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="ZoneRun Gizlilik Politikası – Toplanan veriler, kullanım amacı, saklama ve güvenlik.">
   <title>ZoneRun Gizlilik Politikası</title>
+  <link rel="alternate" hreflang="tr" href="https://zonerun.github.io/ZoneRun_WebSitesi/gizlilik.html">
+  <link rel="alternate" hreflang="en" href="https://zonerun.github.io/ZoneRun_WebSitesi/privacy.html">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#0d9488">
 </head>
 <body class="privacy-page">
   <header class="site-header">
-    <a href="index.html" class="site-logo">ZoneRun</a>
-    <nav class="lang-nav" aria-label="Dil seçimi">
-      <a href="gizlilik.html" aria-current="page">TR</a>
-      <a href="privacy.html">EN</a>
-    </nav>
+    <a href="index.html" class="site-logo">
+      <img src="images/Main_Logo.jpg" alt="ZoneRun" class="site-logo-img" width="36" height="36">
+      <span>ZoneRun</span>
+    </a>
+    <div class="header-actions">
+      <button type="button" class="theme-toggle" id="theme-toggle" aria-label="Tema değiştir">
+        <span class="icon-light" aria-hidden="true"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/></svg></span>
+        <span class="icon-dark" aria-hidden="true"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/></svg></span>
+      </button>
+      <nav class="lang-nav" aria-label="Dil seçimi">
+        <a href="gizlilik.html" aria-current="page">TR</a>
+        <a href="privacy.html">EN</a>
+      </nav>
+    </div>
   </header>
 
   <main class="main">
@@ -57,6 +70,19 @@
       <h2>8. İletişim</h2>
       <p>Gizlilik ve veri talepleri için: <a href="mailto:zoneruun@gmail.com">zoneruun@gmail.com</a></p>
     </article>
+    <footer class="site-footer">
+      <div class="site-footer-inner">
+        <a href="index.html">Ana sayfa</a>
+        <span class="sep">·</span>
+        <a href="gizlilik.html">Gizlilik (TR)</a>
+        <span class="sep">·</span>
+        <a href="privacy.html">Privacy (EN)</a>
+        <span class="sep">·</span>
+        <a href="mailto:zoneruun@gmail.com">İletişim</a>
+      </div>
+      <p class="copy">ZoneRun © <span id="year">2025</span></p>
+    </footer>
   </main>
+  <script src="js/main.js"></script>
 </body>
 </html>
