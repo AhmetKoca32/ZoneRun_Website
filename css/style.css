@@ -449,7 +449,7 @@ body {
 /* Ekran görüntüsü kartı – sade, yumuşak köşe */
 .screenshot-card {
   width: min(280px, 85vw);
-  border-radius: 36px;
+  border-radius: 44px;
   overflow: hidden;
   background: var(--color-card);
   border: 1px solid var(--color-border);
@@ -811,6 +811,6 @@ body.privacy-page .main {
 
   .screenshot-card {
     width: min(260px, 78vw);
-    border-radius: 28px;
+    border-radius: 40px;
   }
 }
