@@ -18,6 +18,8 @@ function install(e) {
         './index.html',
         './gizlilik.html',
         './privacy.html',
+        './kullanim-kosullari.html',
+        './terms.html',
         './css/style.css',
         './js/main.js',
         './images/icon.svg',
