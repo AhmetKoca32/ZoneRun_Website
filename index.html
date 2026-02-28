@@ -92,31 +92,58 @@
     </section>
 
     <section class="screenshots" aria-labelledby="screenshots-title">
-      <h2 id="screenshots-title" data-tr="Nasıl görünüyor?" data-en="How it looks">Nasıl görünüyor?</h2>
-      <div class="screenshot-slider">
-        <div class="screenshot-track" id="screenshot-track">
-          <div class="screenshot-slide">
-            <img src="images/Map_Page.png" alt="Harita ekranı" data-alt-tr="Harita ekranı" data-alt-en="Map screen" width="280" height="560" loading="lazy">
-          </div>
-          <div class="screenshot-slide">
-            <img src="images/Home_Page.png" alt="Ana sayfa" data-alt-tr="Ana sayfa" data-alt-en="Home screen" width="280" height="560" loading="lazy">
-          </div>
-          <div class="screenshot-slide">
-            <img src="images/History_Page.png" alt="Geçmiş" data-alt-tr="Geçmiş" data-alt-en="History" width="280" height="560" loading="lazy">
-          </div>
-          <div class="screenshot-slide">
-            <img src="images/Profile_Page.png" alt="Profil" data-alt-tr="Profil" data-alt-en="Profile" width="280" height="560" loading="lazy">
-          </div>
-          <div class="screenshot-slide">
-            <img src="images/Share_Preview.png" alt="Paylaşım önizlemesi" data-alt-tr="Paylaşım önizlemesi" data-alt-en="Share preview" width="280" height="560" loading="lazy">
-          </div>
-        </div>
-        <div class="slider-nav">
-          <button type="button" id="slider-prev" aria-label="Önceki">‹</button>
-          <button type="button" id="slider-next" aria-label="Sonraki">›</button>
-        </div>
-        <div class="slider-dots" id="slider-dots"></div>
+      <div class="screenshots-header">
+        <h2 id="screenshots-title" data-tr="Nasıl görünüyor?" data-en="How it looks">Nasıl görünüyor?</h2>
+        <p class="screenshots-desc" data-tr="Uygulama ekranlarından birkaç örnek." data-en="A few screens from the app.">Uygulama ekranlarından birkaç örnek.</p>
       </div>
+      <div class="screenshot-slider-wrap">
+        <button type="button" class="slider-btn slider-btn-prev" id="slider-prev" aria-label="Önceki">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
+        </button>
+        <div class="screenshot-slider">
+          <div class="screenshot-track" id="screenshot-track">
+            <div class="screenshot-slide">
+              <div class="phone-mockup">
+                <div class="phone-notch"></div>
+                <img src="images/Map_Page.png" alt="Harita ekranı" data-alt-tr="Harita ekranı" data-alt-en="Map screen" width="280" height="560" loading="lazy">
+              </div>
+              <span class="slide-label" data-tr="Harita" data-en="Map">Harita</span>
+            </div>
+            <div class="screenshot-slide">
+              <div class="phone-mockup">
+                <div class="phone-notch"></div>
+                <img src="images/Home_Page.png" alt="Ana sayfa" data-alt-tr="Ana sayfa" data-alt-en="Home screen" width="280" height="560" loading="lazy">
+              </div>
+              <span class="slide-label" data-tr="Ana sayfa" data-en="Home">Ana sayfa</span>
+            </div>
+            <div class="screenshot-slide">
+              <div class="phone-mockup">
+                <div class="phone-notch"></div>
+                <img src="images/History_Page.png" alt="Geçmiş" data-alt-tr="Geçmiş" data-alt-en="History" width="280" height="560" loading="lazy">
+              </div>
+              <span class="slide-label" data-tr="Geçmiş" data-en="History">Geçmiş</span>
+            </div>
+            <div class="screenshot-slide">
+              <div class="phone-mockup">
+                <div class="phone-notch"></div>
+                <img src="images/Profile_Page.png" alt="Profil" data-alt-tr="Profil" data-alt-en="Profile" width="280" height="560" loading="lazy">
+              </div>
+              <span class="slide-label" data-tr="Profil" data-en="Profile">Profil</span>
+            </div>
+            <div class="screenshot-slide">
+              <div class="phone-mockup">
+                <div class="phone-notch"></div>
+                <img src="images/Share_Preview.png" alt="Paylaşım önizlemesi" data-alt-tr="Paylaşım önizlemesi" data-alt-en="Share preview" width="280" height="560" loading="lazy">
+              </div>
+              <span class="slide-label" data-tr="Paylaşım" data-en="Share">Paylaşım</span>
+            </div>
+          </div>
+        </div>
+        <button type="button" class="slider-btn slider-btn-next" id="slider-next" aria-label="Sonraki">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
+        </button>
+      </div>
+      <div class="slider-dots" id="slider-dots"></div>
     </section>
 
     <section class="roadmap">

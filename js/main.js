@@ -114,7 +114,7 @@
       if (i === 0) btn.classList.add('active');
       btn.addEventListener('click', function (idx) {
         var slide = slides[idx];
-        if (slide) slide.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'start' });
+        if (slide) slide.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
         dotsEl.querySelectorAll('button').forEach(function (b, j) { b.classList.toggle('active', j === idx); });
       }.bind(null, i));
       dotsEl.appendChild(btn);
