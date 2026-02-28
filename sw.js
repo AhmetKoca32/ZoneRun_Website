@@ -1,4 +1,4 @@
-var CACHE = 'zonerun-v3';
+var CACHE = 'zonerun-v4';
 
 function isLocalhost() {
   try {
@@ -10,6 +10,7 @@ function isLocalhost() {
 
 function install(e) {
   if (isLocalhost()) return;
+  self.skipWaiting();
   e.waitUntil(
     caches.open(CACHE).then(function (cache) {
       return cache.addAll([
@@ -32,21 +33,27 @@ function install(e) {
   );
 }
 
+/* Önce ağ: güncellemeler hemen görünsün, sadece offline’da cache kullanılsın */
 function fetchHandler(e) {
   if (isLocalhost()) return;
   e.respondWith(
-    caches.match(e.request).then(function (cached) {
-      if (cached) return cached;
-      return fetch(e.request).then(function (res) {
+    fetch(e.request)
+      .then(function (res) {
         if (res && res.status === 200 && res.url.indexOf('http') === 0) {
           var clone = res.clone();
           caches.open(CACHE).then(function (cache) { return cache.put(e.request, clone); });
         }
         return res;
-      });
-    })
+      })
+      .catch(function () {
+        return caches.match(e.request);
+      })
   );
 }
 
 self.addEventListener('install', install);
+self.addEventListener('activate', function (e) {
+  if (isLocalhost()) return;
+  e.waitUntil(self.clients.claim());
+});
 self.addEventListener('fetch', fetchHandler);
