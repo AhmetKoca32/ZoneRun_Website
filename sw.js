@@ -1,6 +1,15 @@
-var CACHE = 'zonerun-v2';
+var CACHE = 'zonerun-v3';
+
+function isLocalhost() {
+  try {
+    return self.location.hostname === 'localhost' || self.location.hostname === '127.0.0.1';
+  } catch (e) {
+    return false;
+  }
+}
 
 function install(e) {
+  if (isLocalhost()) return;
   e.waitUntil(
     caches.open(CACHE).then(function (cache) {
       return cache.addAll([
@@ -24,6 +33,7 @@ function install(e) {
 }
 
 function fetchHandler(e) {
+  if (isLocalhost()) return;
   e.respondWith(
     caches.match(e.request).then(function (cached) {
       if (cached) return cached;
